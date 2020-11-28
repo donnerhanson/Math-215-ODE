@@ -20,18 +20,32 @@
 
 \usepackage{mathtools}
 
-\begin{document}
+\usepackage[T1]{fontenc}
+\usepackage{titling}
+
+\setlength{\droptitle}{-10em}   % This is your set screw
+
 \pagestyle{empty}
 %----------------------------------------------------------------------------------------
 %	DOCUMENT INFORMATION
 %----------------------------------------------------------------------------------------
 
-\title{Separable Differential Equations (1.4) and Homogeneous first-order DE’s (1.8)} % Title
+\title{Separable Differential Equations and Homogeneous First-Order DE’s} % Title
 
-\author{Donner \textsc{Hanson}} % Author name
+\author{Donner \textsc{Hanson}\\
+\and
+Jack \textsc{McGrath}\\
+\and
+Sarah \textsc{Townsend}
+\and
+Anna \textsc{Greene}
+\and
+Caitlin \textsc{Felts}
+} % Author name
 
 \date{\today} % Date for the report
 
+\begin{document}
 \maketitle % Insert the title, author and date
 
 \begin{center}
@@ -45,15 +59,51 @@ Time: & Monday, Wednesday, Friday 12:00PM - 1:00PM\\
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
-
-\begin{center}
-\begin{LARGE}\textbf{Separable Differential Equations (1.4) }
- \end{LARGE}
- \end{center}
-
-
+\begin{flushleft}
+\section*{1.4 Separable Differential Equations  }{
+Definition 1.4.1:
+A first-order differential equation is called separable if it can be written in the form
+\[p(y)\cdot \frac{dy}{dx} = q(x) \] 
 
 
+\subsection*{\textbf{1.4.2 Theorem:}} 
+If p(y) and q(x) are continuous, then Equation (1.4.1) has the general solution
+
+\[\int q(y) \cdot dy  = \int p(x) \cdot dx + c\]\\
+
+
+where $c$ is an arbitrary constant.
+
+\textbf{[2-3 examples]}
+
+}
+\section*{1.8 Homogeneous first-order DE’s}{
+
+\subsection*{\textbf{1.8.1 Definition:}}
+A function is homogeneous of degree zero if\\
+
+\[f(tx,ty) = f(x,y)\] \\
+
+for all positive values of $t$ for which $(tx , ty)$ is in the domain of $f$.\\
+
+
+\subsection*{\textbf{1.8.3 Theorem:}}
+ A function $f(x,y)$ is homogeneous of degree zero if and only if it depends on $y$ or $x$ only. \\
+
+\subsection*{\textbf{1.8.4 Definition:}}
+If $f(x,y)$ is homogeneous of degree zero, then the differential equation 
+\[ \frac{dy}{dx} = f(x,y) \]\\
+is called a homogeneous first-order differential equation. 
+
+\subsection*{\textbf{1.8.5 Theorem:}}
+The change of variables $ y = x \cdot V(x) $ reduces a homogeneous first-order differential equation 
+$ \frac{dy}{dx} = f(x,y) $ to the separable equation 
+
+\[\frac{1}{F(V) - V} \cdot dV = \frac{1}{x} \cdot dx \]\\
+
+\textbf{[2-3 examples]}
+}
+\end{flushleft}
 %\newpage
 %----------------------------------------------------------------------------------------
 
