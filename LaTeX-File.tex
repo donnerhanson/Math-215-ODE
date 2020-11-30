@@ -72,10 +72,63 @@ If p(y) and q(x) are continuous, then Equation (1.4.1) has the general solution
 \[\int q(y) \cdot dy  = \int p(x) \cdot dx + c\]\\
 
 
-where $c$ is an arbitrary constant.
+where $c$ is an arbitrary constant.\\
+%%%%%%%%%%%%%%%%
+%% EXAMPLE 1 SDE
+%%%%%%%%%%%%%%%%
+\subsection*{\textbf{Example 1:}} 
+\textbf{Find the general solution to $\frac{dy}{dx} = y^2 \cdot e^x dx$}\\
 
-\textbf{[2-3 examples]}
+Start by separating the variables to separate sides of the equation\\
+\begin{align*}
+\frac{1}{y^2} dy & = e^x dx
+\end{align*}
+Integrate both sides
+\begin{align*}
+\int \frac{1}{y^2} dy & = \int e^x dx \\
+\int y^{-2} dy & = \int e^x dx \\
+-y^{-1} & = e^x + C \\
+-\frac{1}{y} & = e^x +C \\
+y & = - \frac{1}{e^x + C} \\
+\end{align*}
 
+\subsection*{\textbf{Example 2:}} 
+Find the solution to \[\frac{dy}{dx}=\frac{4yx}{x^2+8}\] \\ 
+Separate the variables to each side of the equation \\
+
+\begin{align*}
+\frac{1}{4y} dy & = \frac{x}{x^2 + 8} dx
+\end{align*}
+Integrate both sides
+
+\begin{align*}
+\int \frac{1}{4y} dy & = \int \frac{x}{x^2 + 8} dx
+\end{align*}
+
+Use U-substitution for the integration of the right hand side.
+\begin{align*}
+u & = x^2 + 8  && dx = \frac{du}{2x}
+\end{align*}
+
+Obtaining: \\
+\begin{align*}
+\frac{1}{4}\int\frac{1}{y}dy & = \int \frac{x}{u} \cdot \frac{du}{2x} \\
+\frac{1}{4}\int\frac{1}{y}dy & = \int \frac{1}{u} \cdot \frac{du}{2} \\
+\frac{1}{4}\int\frac{1}{y}dy & = \frac{1}{2} \int \frac{1}{u} du \\
+\frac{1}{4}ln\mid y \mid & = \frac{1}{2} ln \mid u \mid + C \\
+\end{align*}
+
+Replace $u$ in terms of $x$ back into the equation to get in original terms of $x$ and $y$\\
+\begin{align*}
+\frac{1}{4}ln\mid y \mid & = \frac{1}{2} ln \mid (x^2 + 8) \mid + C \\
+ln\mid y \mid & = \frac{4}{2} ln \mid (x^2 + 8) \mid + C \\
+ln\mid y \mid & = \frac{4}{2} ln (x^2 + 8) + C \\
+e^{ln(y)} & = e^{2ln(x^2+8) + C} \\
+y & = e^ln((x^2 + 8)^2)\cdot e^C \\
+y & = (x^2 + 8)^2 \cdot e^C \\
+\text {\textbf{let: } } C_1 & = e^C \\
+y & = C_1(x^2 + 8)^2 \\
+\end{align*}
 }
 %%%%%%%%%%%%%%%%
 %%HOMOGENOUS F-O DE %
