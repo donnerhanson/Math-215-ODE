@@ -129,6 +129,65 @@ y & = (x^2 + 8)^2 \cdot e^C \\
 \text {\textbf{let: } } C_1 & = e^C \\
 y & = C_1(x^2 + 8)^2 \\
 \end{align*}
+
+
+
+
+\textbf{Example 2:}\\
+At 2PM on a cool ($34^{\circ}$F)  afternoon in March, Sherlock Holmes measured the temperature of a dead body to be at $38^{\circ}$F. One hour later, the temperature was at $38^{\circ}$F. After a quick calculation using Newton’s law of cooling and taking the normal temperature of a living body to be $98^{\circ}$F, Holmes concluded that time of death was 10 AM. Was Holmes right?\\
+\bigskip
+To solve this problem we can use Newton's Law of Cooling.\\
+\[ \frac{dT}{dt} = -k(T-T_m)\]
+
+\[ T_m = 34 \]
+
+Setup:
+\begin{align*}
+\frac{dT}{dt} & = -k(T-34) && \text{[Plug in known variables]}\\
+\int \frac{dT}{(T-34)} & = \int -kdt && \text{[Integrate both sides]}
+\end{align*}
+\bigskip
+Solve for T:\\
+\begin{align*}
+ln(T - 34) & =  -kt + C \\
+e^{ln(T - 34)} & = e^{-kt + C} \\
+T - 34 & = C_1e^{-kt} && \text{[let: $e^C = C_1$]}\\
+T & = C_1e^{-kt} +34
+\end{align*}
+Solve for the given times to find k. \\
+Note: t is found by taking time elapsed from t = 0 (10 AM).\\
+At 2 PM the body's temperature was $38^{\circ}$F\\
+\begin{align*}
+T & = C_1e^{-kt} + 34 && \text{[Using the equation]} \\
+38 & = C_1e^{-k(4)} + 34 && \text{[t = 4, hours between 10 AM and  2 PM]} \\
+4 & = C_1e^{-4k}
+\end{align*}
+At 3 PM the body's temperature was $36^{\circ}$F\\
+\begin{align*}
+36 & = C_1e^{-k(5)} + 34 && \text{[t = 4, hours between 10 AM and  3 PM]} \\
+2 & = C_1e^{-5k}
+\end{align*}
+Solve for k.\\
+\begin{align*}
+\frac{4}{2} & = \frac{C_1e^{-4k}}{C_1e^{-5k}}\\
+2 & = e^k\\
+ln(2) & = k
+\end{align*}
+Plug in k to solve for $C_1$ which is equivalent to $e^C$
+\begin{align*}
+4 & = C_1e^{-4ln(2)} \\
+4 & = \frac{1}{16}C_1 \\
+C_1 & = 64 \\
+\end{align*}
+Substitute for $t = 0$ in the initial value equation to check if Holmes was correct about the crime occurring at 10 AM.
+\begin{align*}
+T(0) & = 34 + 64 \cdot e^{(0)(ln2)}\\
+T(0) & = 34 + 64\\
+T(0) & = 98 \\
+\end{align*}
+\bigskip
+Since the temperature at 10 AM was determined to be $98^{\circ}$ Holmes was correct!\\
+
 }
 %%%%%%%%%%%%%%%%
 %%HOMOGENOUS F-O DE %
@@ -170,6 +229,7 @@ $ \frac{dy}{dx} = f(x,y) $ to the separable equation
 \end{enumerate}
 
 \textbf{[2-3 examples]}\\
+\textbf{Example 1:}\\
 Determine if the following equation is homogeneous. If it is homogeneous, then solve.
 \begin{align*}
 \frac{dy}{dx} & = \frac{3y^2 +xy}{x^2}\\
@@ -202,7 +262,7 @@ Rearrange to solve using separable DE method\\
 -\frac{1}{3}v^{-1} & = ln\mid x \mid + C
 \end{align*}
 
-Now aquire the equation in terms of x and y with our substitution ratios
+Now acquire the equation in terms of x and y with our substitution ratios
 
 \begin{align*}
 -\frac{1}{3}v^{-1} & = ln\mid x \mid + C \\
@@ -216,6 +276,8 @@ y & =  \frac{x}{ -3 (ln\mid x \mid + C) } \\
 \end{align*}
 
 }
+
+
 \end{flushleft}
 %\newpage
 %----------------------------------------------------------------------------------------
