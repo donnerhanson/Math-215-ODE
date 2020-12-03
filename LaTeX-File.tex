@@ -60,7 +60,7 @@ Time: & Monday, Wednesday, Friday 12:00PM - 1:00PM\\
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 \begin{flushleft}
-\section*{1.4 Separable Differential Equations  }{
+\section*{1.4 Separable Differential Equations  } {
 Definition 1.4.1:
 A first-order differential equation is called separable if it can be written in the form
 \[p(y)\cdot \frac{dy}{dx} = q(x) \] 
@@ -69,13 +69,14 @@ A first-order differential equation is called separable if it can be written in 
 \subsection*{\textbf{1.4.2 Theorem:}} 
 If p(y) and q(x) are continuous, then Equation (1.4.1) has the general solution
 
-\[\int q(y) \cdot dy  = \int p(x) \cdot dx + c\]\\
+\[\int q(y) \cdot dy  = \int p(x) \cdot dx + C\]\\
 
 
-where $c$ is an arbitrary constant.\\
+where $C$ is an arbitrary constant.\\
 %%%%%%%%%%%%%%%%
 %% EXAMPLE 1 SDE
 %%%%%%%%%%%%%%%%
+\bigskip
 \subsection*{\textbf{Example 1:}} 
 \textbf{Find the general solution to $\frac{dy}{dx} = y^2 \cdot e^x dx$}\\
 
@@ -115,7 +116,7 @@ Obtaining: \\
 \frac{1}{4}\int\frac{1}{y}dy & = \int \frac{x}{u} \cdot \frac{du}{2x} \\
 \frac{1}{4}\int\frac{1}{y}dy & = \int \frac{1}{u} \cdot \frac{du}{2} \\
 \frac{1}{4}\int\frac{1}{y}dy & = \frac{1}{2} \int \frac{1}{u} du \\
-\frac{1}{4}ln\mid y \mid & = \frac{1}{2} ln \mid u \mid + C \\
+\frac{1}{4}ln\mid y \mid & = \frac{1}{2} ln \mid u \mid + C
 \end{align*}
 
 Replace $u$ in terms of $x$ back into the equation to get in original terms of $x$ and $y$\\
@@ -127,13 +128,10 @@ e^{ln(y)} & = e^{2ln(x^2+8) + C} \\
 y & = e^{ln((x^2 + 8)^2)}\cdot e^C \\
 y & = (x^2 + 8)^2 \cdot e^C \\
 \text {\textbf{let: } } C_1 & = e^C \\
-y & = C_1(x^2 + 8)^2 \\
+y & = C_1(x^2 + 8)^2 
 \end{align*}
 
-
-
-
-\textbf{Example 2:}\\
+\subsection*{\textbf{Example 3:}}
 At 2PM on a cool ($34^{\circ}$F)  afternoon in March, Sherlock Holmes measured the temperature of a dead body to be at $38^{\circ}$F. One hour later, the temperature was at $38^{\circ}$F. After a quick calculation using Newton’s law of cooling and taking the normal temperature of a living body to be $98^{\circ}$F, Holmes concluded that time of death was 10 AM. Was Holmes right?\\
 \bigskip
 To solve this problem we can use Newton's Law of Cooling.\\
@@ -177,13 +175,13 @@ Plug in k to solve for $C_1$ which is equivalent to $e^C$
 \begin{align*}
 4 & = C_1e^{-4ln(2)} \\
 4 & = \frac{1}{16}C_1 \\
-C_1 & = 64 \\
+C_1 & = 64 
 \end{align*}
 Substitute for $t = 0$ in the initial value equation to check if Holmes was correct about the crime occurring at 10 AM.
 \begin{align*}
 T(0) & = 34 + 64 \cdot e^{(0)(ln2)}\\
 T(0) & = 34 + 64\\
-T(0) & = 98 \\
+T(0) & = 98 
 \end{align*}
 \bigskip
 Since the temperature at 10 AM was determined to be $98^{\circ}$ Holmes was correct!\\
@@ -227,14 +225,13 @@ $ \frac{dy}{dx} = f(x,y) $ to the separable equation
 \item Solve the differential equation using separation of variables
 \item Solve the original differential equation in terms of $x$ and $y$
 \end{enumerate}
-
-\textbf{[2-3 examples]}\\
-\textbf{Example 1:}\\
+\bigskip
+\subsection*{\textbf{Example 1:}}
 Determine if the following equation is homogeneous. If it is homogeneous, then solve.
 \begin{align*}
 \frac{dy}{dx} & = \frac{3y^2 +xy}{x^2}\\
 \end{align*}
-Multiplying both the numerator and the denominator by $\frac{1}{x^2}$ results in:\\
+Multiplying both the numerator and the denominator by $\frac{1}{x^2}$ results in:
 \begin{align*}
 \frac{dy}{dx} & = 3(\frac{y}{x})^2+\frac{y}{x}\\
 \end{align*}
@@ -243,18 +240,18 @@ Which is in the form of:
 \frac{dy}{dx} & = F (\frac{y}{x})
 \end{align*}
 
-Using our substitutions:\\
+Using our substitutions:
 \begin{align*}
 v & = \frac{y}{x}\\
 \frac{dy}{dx} & = x \frac{dv}{dx} + v\
  \end{align*}
-We obtain:\\
+We obtain:
 \begin{align*}
 x \cdot \frac{dv}{dx} + v & = 3v^2 + v\\
 x \cdot  \frac{dv}{dx}  & = 3v^2 
 \end{align*}
 
-Rearrange to solve using separable DE method\\
+Rearrange to solve using separable DE method
 \begin{align*}
 \frac{1}{3v^2} \cdot dv & = \frac{1}{x} \cdot dx \\
 \frac{1}{3} v^{-2} \cdot dv & = \frac{1}{x} \cdot dx \\
@@ -272,11 +269,11 @@ Now acquire the equation in terms of x and y with our substitution ratios
 \frac{x}{y} & = -3 (ln\mid x \mid + C) \\
 \frac{x}{y} & = \frac{ -3 (ln\mid x \mid + C) }{1} \\
 \frac{y}{x} & = \frac{1}{ -3 (ln\mid x \mid + C) } \\
-y & =  \frac{x}{ -3 (ln\mid x \mid + C) } \\
+y & =  \frac{x}{ -3 (ln\mid x \mid + C) } 
 \end{align*}
 
 
-\textbf{Example 2:}\\
+\subsection*{\textbf{Example 2:}}
 Determine if the following equation is homogeneous. If it is homogeneous, then solve.
 \begin{align*}
 \frac{dy}{dx} & = \frac{y}{x +\sqrt{xy}}\\
