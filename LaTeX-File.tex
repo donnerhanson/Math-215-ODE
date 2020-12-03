@@ -275,6 +275,54 @@ Now acquire the equation in terms of x and y with our substitution ratios
 y & =  \frac{x}{ -3 (ln\mid x \mid + C) } \\
 \end{align*}
 
+
+\textbf{Example 2:}\\
+Determine if the following equation is homogeneous. If it is homogeneous, then solve.
+\begin{align*}
+\frac{dy}{dx} & = \frac{y}{x +\sqrt{xy}}\\
+\end{align*}
+Multiplying both the numerator and the denominator by $\frac{1}{x}$ results in:\\
+\begin{align*}
+\frac{dy}{dx} & = \frac{(\frac{y}{x})}{\frac{x}{x} +\sqrt{\frac{xy}{x^2}}}\\
+\end{align*}
+To get this in the form of:
+\begin{align*}
+\frac{dy}{dx} & = F (\frac{y}{x})
+\end{align*}
+We need to simplify, which will give us:\\
+\begin{align*}
+\frac{dy}{dx} & = \frac{(\frac{y}{x})}{1 +\sqrt{(\frac{y}{x})}}\\
+\end{align*}
+
+Once in the correct form, using our substitutions:\\
+\begin{align*}
+v & = \frac{y}{x}\\
+\frac{dy}{dx} & = x \frac{dv}{dx} + v\\
+ \end{align*}
+We obtain:\\
+\begin{align*}
+x \cdot \frac{dv}{dx} + v & = \frac{v}{1 + v^\frac{1}{2}}\\
+x \cdot  \frac{dv}{dx}  & = \frac{v}{1 + v^\frac{1}{2}} - \frac{v}{1}\\
+x \cdot  \frac{dv}{dx}  & = \frac{-v^\frac{3}{2}}{1 + v^\frac{1}{2}}\\
+\end{align*}
+
+Rearrange to solve using separable DE method\\
+\begin{align*}
+\frac{1 + v^\frac{1}{2}}{-v^\frac{3}{2}} \cdot dv & = \frac{1}{x} \cdot dx \\
+(-v^\frac{-3}{2} - \frac{1}{v}) \cdot dv & = \frac{1}{x} \cdot dx \\
+\int (-v^\frac{-3}{2} - \frac{1}{v}) \cdot dv & = \int \frac{1}{x} \cdot dx  \\
+2v^\frac{-1}{2} - ln \mid v \mid & = ln \mid x \mid + C \\
+\end{align*}
+
+Now acquire the equation in terms of x and y with our substitution ratios
+
+\begin{align*}
+2v^\frac{-1}{2} - ln \mid v \mid & = ln \mid x \mid + C \\
+2(\frac{x}{y})^\frac{1}{2} - ln \mid \frac{y}{x} \mid & = ln \mid x \mid + C \\
+2(\frac{x}{y})^\frac{1}{2} - (ln \mid y \mid - ln \mid x \mid) & = ln \mid x \mid + C \\
+2\sqrt{\frac{x}{y}} - ln \mid y \mid & = C \\
+\end{align*}
+
 }
 
 
