@@ -54,7 +54,7 @@ This lecture is to show the steps in solving Separable Differential Equations an
 
 
 
- Project Link: [https://github.com/donnerhanson/Math-215-ODE/edit/main/README.md](https://github.com/donnerhanson/Math-215-ODE/edit/main/README.md)  
+ Project Link: [https://github.com/donnerhanson/Math-215-ODE](https://github.com/donnerhanson/Math-215-ODE)  
 
  <!-- MARKDOWN LINKS & IMAGES -->
  <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
